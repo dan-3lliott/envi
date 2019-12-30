@@ -10,15 +10,15 @@ public class MainStage extends Stage {
     private static final int height = 900;
     public MainStage() {
         //set up window
-        setTitle("Envi");
+        setTitle("envi");
         setWidth(width);
         setHeight(height);
         initStyle(StageStyle.UNDECORATED);
         //set up tabpane and declare tabs
         TabPane mainPane = new TabPane();
-
+        LPITab lpiTab = new LPITab();
         //add tabs to tabpane
-
+        mainPane.getTabs().addAll(lpiTab);
         //make tabs unclosable
         mainPane.setTabClosingPolicy(TabPane.TabClosingPolicy.UNAVAILABLE);
         //create custom title bar and set its position to the upper right hand corner of the window

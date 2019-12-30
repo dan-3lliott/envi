@@ -5,9 +5,14 @@
     -fx-primary-hover: #4d525c;
 }
 
+@font-face {
+    font-family: 'Cocomat';
+    src: url('../assets/Cocomat.ttf');
+}
+
 .root {
     -fx-background-color: -fx-primary;
-    -fx-font-family: Helvetica;
+    -fx-font-family: Cocomat;
     -fx-focus-color: transparent;
     -fx-faint-focus-color: transparent;
 }
