@@ -53,7 +53,7 @@
 }
 
 .text-field {
-    -fx-pref-columns: 10;
+    -fx-pref-columns: 8;
     -fx-border-radius: 5;
 }
 
@@ -77,4 +77,8 @@
     -fx-border-radius: 5;
     -fx-border-color: -fx-secondary;
     -fx-text-fill: -fx-primary-text;
+}
+
+.combo-box:hover {
+    -fx-background-color: -fx-primary-hover;
 }

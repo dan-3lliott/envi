@@ -53,7 +53,7 @@
 }
 
 .text-field {
-    -fx-pref-columns: 10;
+    -fx-pref-columns: 8;
     -fx-border-radius: 5;
 }
 
