@@ -13,6 +13,7 @@ public class Point {
         this.groundCover = groundCover;
         this.notes = notes;
     }
+    public Point() {}
     public int getDistance() {
         return distance;
     }

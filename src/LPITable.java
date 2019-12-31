@@ -1,6 +1,7 @@
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+
 import java.util.Objects;
 
 public class LPITable extends TableView {
@@ -23,6 +24,6 @@ public class LPITable extends TableView {
         //add columns
         getColumns().addAll(distanceColumn, fluvialSettingColumn, epifaunalSubstrateColumn, speciesColumn, groundCoverColumn, notesColumn);
         //populate with data
-        getItems().addAll(Objects.requireNonNull(Data.lpiPoints));
+        getItems().addAll(Data.lpiPoints);
     }
 }
