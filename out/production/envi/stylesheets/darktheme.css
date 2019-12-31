@@ -71,3 +71,10 @@
 .label {
     -fx-text-fill: -fx-primary-text;
 }
+
+.combo-box {
+    -fx-background-color: -fx-primary;
+    -fx-border-radius: 5;
+    -fx-border-color: -fx-secondary;
+    -fx-text-fill: -fx-primary-text;
+}
