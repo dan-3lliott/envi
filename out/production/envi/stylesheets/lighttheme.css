@@ -1,7 +1,7 @@
 * {
-    -fx-primary: #2A2E37;
-    -fx-secondary: #FFFFFF;
-    -fx-primary-text: #ebebeb;
+    -fx-primary: #FFFFFF;
+    -fx-secondary: #2A2E37;
+    -fx-primary-text: #000000;
     -fx-primary-hover: #4d525c;
 }
 
@@ -69,12 +69,5 @@
 }
 
 .label {
-    -fx-text-fill: -fx-primary-text;
-}
-
-.combo-box {
-    -fx-background-color: -fx-primary;
-    -fx-border-radius: 5;
-    -fx-border-color: -fx-secondary;
     -fx-text-fill: -fx-primary-text;
 }

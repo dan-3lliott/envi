@@ -29,7 +29,7 @@ public class MainStage extends Stage {
         //wrap stackpane in a scene, then add it
         setScene(new Scene(stackPane));
         //add style to the scene
-        getScene().getStylesheets().add(Main.style);
+        getScene().getStylesheets().add(Main.styles[0]);
         //move window to front
         toFront();
     }

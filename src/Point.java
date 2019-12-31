@@ -1,11 +1,11 @@
 public class Point {
-    private int distance;
+    private Integer distance;
     private String fluvialSetting;
     private String epifaunalSubstrate;
     private String species;
     private String groundCover;
     private String notes;
-    public Point(int distance, String fluvialSetting, String epifaunalSubstrate, String species, String groundCover, String notes) {
+    public Point(Integer distance, String fluvialSetting, String epifaunalSubstrate, String species, String groundCover, String notes) {
         this.distance = distance;
         this.fluvialSetting = fluvialSetting;
         this.epifaunalSubstrate = epifaunalSubstrate;
@@ -14,7 +14,7 @@ public class Point {
         this.notes = notes;
     }
     public Point() {}
-    public int getDistance() {
+    public Integer getDistance() {
         return distance;
     }
     public String getFluvialSetting() {

@@ -1,8 +1,12 @@
+import javafx.collections.FXCollections;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
+
+import java.util.Arrays;
 
 public class TitleBar extends HBox {
     private static final int height = 20;
@@ -16,16 +20,23 @@ public class TitleBar extends HBox {
         setSpacing(5);
         setPadding(new Insets(10));
         //create buttons
+        ComboBox changeStyle = new ComboBox(FXCollections.observableList(Arrays.asList(Main.styles)));
         Button minimize = new Button("—");
         Button close = new Button(" X ");
+        //define action for the change style combobox
+        changeStyle.setOnAction(e -> {
+            ((ComboBox)e.getSource()).getScene().getStylesheets().clear();
+            ((ComboBox)e.getSource()).getScene().getStylesheets().add(changeStyle.getValue().toString());
+        });
         //define action for the minimize button
         minimize.setOnAction(e -> ((Stage)((Button)e.getSource()).getScene().getWindow()).setIconified(true));
         //define action for the close button
         close.setOnAction(e -> ((Stage)((Button)e.getSource()).getScene().getWindow()).close());
-        //remove button borders while leaving the rest of the css styling for buttons intact
+        //remove borders while leaving the rest of the css styling for buttons intact
+        changeStyle.setStyle(noBorder);
         minimize.setStyle(noBorder);
         close.setStyle(noBorder);
         //add buttons to hbox
-        getChildren().addAll(minimize, close);
+        getChildren().addAll(changeStyle, minimize, close);
     }
 }

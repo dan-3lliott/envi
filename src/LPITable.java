@@ -2,8 +2,6 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
-import java.util.Objects;
-
 public class LPITable extends TableView {
     public LPITable() {
         //set up table
