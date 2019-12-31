@@ -8,16 +8,18 @@ public class LPITab extends Tab {
     public LPITab() {
         //set up tab
         setText("line-point intercept");
+        //create form
+        LPIForm lpiForm = new LPIForm();
         //create table
         LPITable lpiTable = new LPITable();
         VBox.setVgrow(lpiTable, Priority.ALWAYS);
         //set up vbox
         VBox vBox = new VBox();
-        vBox.setSpacing(5);
+        vBox.setSpacing(10);
         vBox.setPadding(new Insets(10));
         vBox.setAlignment(Pos.TOP_CENTER);
         //add components to vbox
-        vBox.getChildren().addAll(lpiTable);
+        vBox.getChildren().addAll(lpiForm, lpiTable);
         //set content of tab to vbox
         setContent(vBox);
     }

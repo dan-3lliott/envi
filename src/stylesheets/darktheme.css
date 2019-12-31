@@ -5,21 +5,16 @@
     -fx-primary-hover: #4d525c;
 }
 
-@font-face {
-    font-family: 'Cocomat';
-    src: url('../assets/Cocomat.ttf');
-}
-
 .root {
     -fx-background-color: -fx-primary;
-    -fx-font-family: Cocomat;
+    -fx-font-family: Verdana;
     -fx-focus-color: transparent;
     -fx-faint-focus-color: transparent;
 }
 
 .tab {
     -fx-background-color: -fx-primary;
-    -fx-pref-width: 200;
+    -fx-pref-width: 250;
     -fx-pref-height: 50;
     -fx-padding: 0;
     -fx-border-style: hidden;
@@ -29,7 +24,7 @@
 }
 
 .tab-label {
-    -fx-pref-width: 200;
+    -fx-pref-width: 250;
     -fx-text-fill: -fx-primary-text;
     -fx-font-size: 18;
     -fx-font-weight: bold;
