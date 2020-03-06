@@ -1,13 +1,15 @@
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.cell.TextFieldTableCell;
 
 public class LPITable extends TableView {
     public LPITable() {
         //set up table
         setEditable(true);
+        getSelectionModel().cellSelectionEnabledProperty().set(true);
         //set up columns, then set up cell factory so that point objects can be directly added in
-        TableColumn<Point, Integer> distanceColumn = new TableColumn<>("Distance");
+        TableColumn<Point, String> distanceColumn = new TableColumn<>("Distance");
         distanceColumn.setCellValueFactory(new PropertyValueFactory<>("distance"));
         TableColumn<Point, String> fluvialSettingColumn = new TableColumn<>("Fluvial Setting");
         fluvialSettingColumn.setCellValueFactory(new PropertyValueFactory<>("fluvialSetting"));
@@ -19,7 +21,9 @@ public class LPITable extends TableView {
         groundCoverColumn.setCellValueFactory(new PropertyValueFactory<>("groundCover"));
         TableColumn<Point, String> notesColumn = new TableColumn<>("Notes");
         notesColumn.setCellValueFactory(new PropertyValueFactory<>("notes"));
-        //add columns
+        //make all columns editable
+
+        //add columns to table
         getColumns().addAll(distanceColumn, fluvialSettingColumn, epifaunalSubstrateColumn, speciesColumn, groundCoverColumn, notesColumn);
         //populate with data
         getItems().addAll(Data.lpiPoints);
